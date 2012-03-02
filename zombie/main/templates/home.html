@@ -1,0 +1,18 @@
+<html>
+<head>
+	<title>ZombieTweet</title>
+</head>
+<body>
+	<div>
+		Welcome
+	</div>
+	<hr/>
+	{% for zombie in zombie %}
+	<div>
+		<h3>{{ zombie.name}} - {{ zombie.cemetery }} - ({{zombie.tweet.count}}) tweets </h3>
+		<a href="{% url show_zombie zombie.id %}"> go </a>
+		<br>
+	</div>
+	{% endfor %}
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>{{zombie.name}} -ZombieTweet</title>
+</head>
+<body>
+	<a href = "{% url home %}">Home</a>
+	<h1>{{zombie.name}}</h1>
+	<p>{{zombie.cemetery}}</p>
+	<p>{% for tweet in zombie.tweet.all %}
+		<div>status: {{tweet.status}}</div>
+		{% endfor %}
+	</p>
+</body>
+</html>
